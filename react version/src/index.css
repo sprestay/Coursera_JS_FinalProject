@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.header {
+  height: 122px;
+  display: flex;
+}
+
+body {
+  background-color: #CFD0CF;
+}
+.title {
+  margin: 0 auto;
+  align-self: center;
+  font-size: 42px;
+  color: #434344;
+  line-height: 47px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.map {
+  width: 595px;
+  height: 440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: stretch;
+  perspective: 600px;
+}
+
+.card {
+  width: 130px;
+  height: 130px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  width: 125px;
+  height: 125px;
+  border-radius: 9px;
+  border: 5px solid white;
+  box-shadow: 1px 1px 5px rgba(0,0,0, 50%);
+  position: absolute;
+  font-size: 20px;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: linear-gradient(45deg, #22AB93, #19668D); 
+}
+
+.back {
+  background-color: white;
+  transform: rotateY(180deg);
+  display: flex;
+}
+
+.emoji {
+  margin: 0 auto;
+  align-self: center;
+  font-size: 75px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.timer{
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 36px;
+  font-size: 32px;
+  color: #434344;
+  text-align: center;
+  font-weight: 600;
+}
+
+.message_block {
+  position: absolute;
+  top: 337px;
+  left: 50%;
+  margin: 0 0 0 -175px;
+  text-align: center;
+  height: 188px;
+  min-width: 350px;
+  background-color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1050;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.message {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  font-weight: 600;
+  color: #434344;
+  user-select: none;
+}
+
+button {
+  height: 40px;
+  width: 130px;
+  margin-bottom: 30px;
+  border-radius: 9px;
+  background: linear-gradient(45deg, #19668D, #22AB93);
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 50%);
+  font-weight: 600;
+}
+
+button:active {
+  box-shadow: inset 2px 1px 8px rgba(0,0,0, 50%);
+}
+
+.match {
+  background-color: green;
+  border: 5px solid green;
+}
+.error {
+  background-color: red;
+  border: 5px solid red;
+}
